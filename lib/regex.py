@@ -1,13 +1,11 @@
 import re
 
-# NOTE: There are only a few tests included, so multiple solutions will work.
-# Feel free to encourage students to find oversights and add tests to this lab!
+name_regex = re.compile(r"^[A-Z][a-z]*(?:['-][A-Z][a-z]+| [A-Z][a-z]+)*$")
 
-name = r""
-name_regex = re.compile(name)
+phone_regex = re.compile(
+    r"^(?:\d{10}|\d{3}-\d{3}-\d{4}|\(\d{3}\) \d{3}-\d{4})$"
+)
 
-phone_number = r""
-phone_regex = re.compile(phone_number)
-
-email_address = r""
-email_regex = re.compile(email_address)
+email_regex = re.compile(
+    r"^[a-z]+(?:\.[a-z0-9]+)*@[a-z]+\.[a-z]+$"
+)
